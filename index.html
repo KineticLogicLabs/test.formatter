@@ -7,11 +7,14 @@
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-5XB9F0LBX0');
-    </script> <link rel="icon" type="image/png" href="favicon.png">
+    </script>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test Formatter</title>
+    <title>Test Formatter | Kinetic Logic Labs</title>
+    
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body {
@@ -145,7 +148,6 @@
     </style>
 </head>
 <body class="p-4 md:p-8">
-    <!-- Fullscreen View Container -->
     <div id="fullscreenOverlay">
         <div class="max-w-5xl mx-auto w-full flex flex-col h-full">
             <div class="flex justify-between items-center mb-6">
@@ -180,30 +182,25 @@
         </header>
 
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-            <!-- Settings Panel -->
             <div class="lg:col-span-5 card p-6 border border-slate-200 sticky top-8 max-h-[90vh] overflow-y-auto custom-scroll">
                 <h2 class="text-sm font-black text-slate-400 mb-6 uppercase tracking-widest border-b pb-2">Layout & Structure</h2>
 
-                <!-- Mode Switcher -->
                 <div class="flex p-1 bg-slate-100 rounded-lg mb-6">
                     <button id="tabSingle" onclick="setMode('single')" class="flex-1 py-2 text-sm font-bold rounded-md transition-all bg-white shadow-sm text-blue-600">Single List</button>
                     <button id="tabMulti" onclick="setMode('multi')" class="flex-1 py-2 text-sm font-bold rounded-md transition-all text-slate-500 hover:text-slate-700">Multi-Section</button>
                 </div>
 
-                <!-- Basic Question Count (Single Mode Only) -->
                 <div id="singleModeSettings" class="form-group">
                     <label for="count">Number of Questions</label>
                     <input type="number" id="count" value="10" onfocus="this.select()" oninput="handleStructureChange()" class="w-full rounded-md border-slate-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 text-sm p-3 border">
                 </div>
 
-                <!-- Multi Section Settings (Multi Mode Only) -->
                 <div id="multiModeSettings" class="hidden space-y-4 mb-6">
                     <div class="form-group">
                         <label for="sectionCount">Number of Sections</label>
                         <input type="number" id="sectionCount" value="2" min="1" onfocus="this.select()" oninput="renderSectionGrid()" class="w-full rounded-md border-slate-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 text-sm p-3 border">
                     </div>
 
-                    <!-- Collapsible Header Style -->
                     <div class="dropdown-container closed border-b border-slate-100 pb-2">
                         <div class="dropdown-header" onclick="toggleDropdown(this.parentElement)">
                             <label class="mb-0 cursor-pointer">Header Text Style</label>
@@ -222,7 +219,6 @@
                         </div>
                     </div>
 
-                    <!-- Collapsible Divider Styling -->
                     <div class="dropdown-container closed border-b border-slate-100 pb-2">
                         <div class="dropdown-header" onclick="toggleDropdown(this.parentElement)">
                             <label class="mb-0 cursor-pointer">Divider Styling</label>
@@ -250,8 +246,7 @@
                     <div class="form-group pt-2">
                         <label id="sectionInputsLabel">Questions per Section</label>
                         <div id="sectionInputsContainer" class="section-input-grid">
-                            <!-- Section Inputs -->
-                        </div>
+                            </div>
                     </div>
                 </div>
 
@@ -269,7 +264,6 @@
                     </div>
                 </div>
 
-                <!-- Sub-Question Feature Toggle -->
                 <div class="flex items-center gap-3 p-4 bg-slate-50 rounded-xl border border-slate-200 mb-6">
                     <input type="checkbox" id="enableSubQuestions" onchange="toggleSubQMenu()" class="w-6 h-6 text-blue-600 rounded focus:ring-blue-500 cursor-pointer">
                     <div>
@@ -278,7 +272,6 @@
                     </div>
                 </div>
 
-                <!-- Sub-Question Menu (Conditional) -->
                 <div id="subQMenu" class="hidden animate-in fade-in slide-in-from-top-2 duration-200">
                     <div class="form-group mb-4">
                         <label for="subSpacing">Sub-Question Spacing</label>
@@ -287,8 +280,7 @@
                     
                     <label>Question Customizer</label>
                     <div id="questionList" class="max-h-[250px] overflow-y-auto pr-2 custom-scroll border rounded-lg p-3 bg-slate-50 shadow-inner">
-                        <!-- Questions listed here for sub-q selection -->
-                    </div>
+                        </div>
                 </div>
 
                 <button onclick="generateList()" class="w-full mt-6 bg-slate-800 hover:bg-slate-900 text-white font-bold py-4 px-4 rounded-xl transition transform active:scale-95 shadow-lg">
@@ -296,7 +288,6 @@
                 </button>
             </div>
 
-            <!-- Output Panel -->
             <div class="lg:col-span-7 flex flex-col h-full">
                 <div class="flex justify-between items-center px-1 mb-2">
                     <h2 class="text-xs font-bold text-slate-400 uppercase tracking-widest">Document Preview</h2>
